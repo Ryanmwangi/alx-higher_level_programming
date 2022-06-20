@@ -1,13 +1,19 @@
 #!/usr/bin/python3
-
-
 def safe_print_list(my_list=[], x=0):
-    sum = 0
-    for i in range(x):
+    """
+    Prints elements of a list
+    Args:
+        my_list: intial list
+        x:  Number of elements to print
+    Return:
+        number of elements to print
+    """
+    iter = 0
+    while iter < x:
         try:
-            print("{}".format(my_list[i]), end="")
-            sum += 1
+            print(my_list[iter], end='')
+            iter += 1
         except IndexError:
             break
-    print("")
-    return (sum)
+    print()
+    return iter
